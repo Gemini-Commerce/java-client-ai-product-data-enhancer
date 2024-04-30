@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.openapitools.client.model.AiproductdataenhancerLanguageCode;
+import org.openapitools.client.model.AiproductdataenhancerProductDataToFill;
 import org.openapitools.client.model.AiproductdataenhancerProductInformation;
 
 import com.google.gson.Gson;
@@ -53,7 +54,7 @@ import GeminiCommerce_AiProductDataEnhancer.JSON;
 /**
  * AiproductdataenhancerFillProductDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-02T15:51:08.212237848Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-30T15:19:43.952856902Z[Etc/UTC]")
 public class AiproductdataenhancerFillProductDataRequest {
   public static final String SERIALIZED_NAME_TENANT_ID = "tenantId";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
@@ -69,7 +70,7 @@ public class AiproductdataenhancerFillProductDataRequest {
 
   public static final String SERIALIZED_NAME_PRODUCT_DATA_TO_FILL = "productDataToFill";
   @SerializedName(SERIALIZED_NAME_PRODUCT_DATA_TO_FILL)
-  private List<String> productDataToFill;
+  private List<AiproductdataenhancerProductDataToFill> productDataToFill;
 
   public static final String SERIALIZED_NAME_DOMAINS_TO_INCLUDE = "domainsToInclude";
   @SerializedName(SERIALIZED_NAME_DOMAINS_TO_INCLUDE)
@@ -139,12 +140,12 @@ public class AiproductdataenhancerFillProductDataRequest {
   }
 
 
-  public AiproductdataenhancerFillProductDataRequest productDataToFill(List<String> productDataToFill) {
+  public AiproductdataenhancerFillProductDataRequest productDataToFill(List<AiproductdataenhancerProductDataToFill> productDataToFill) {
     this.productDataToFill = productDataToFill;
     return this;
   }
 
-  public AiproductdataenhancerFillProductDataRequest addProductDataToFillItem(String productDataToFillItem) {
+  public AiproductdataenhancerFillProductDataRequest addProductDataToFillItem(AiproductdataenhancerProductDataToFill productDataToFillItem) {
     if (this.productDataToFill == null) {
       this.productDataToFill = new ArrayList<>();
     }
@@ -157,11 +158,11 @@ public class AiproductdataenhancerFillProductDataRequest {
    * @return productDataToFill
   **/
   @javax.annotation.Nullable
-  public List<String> getProductDataToFill() {
+  public List<AiproductdataenhancerProductDataToFill> getProductDataToFill() {
     return productDataToFill;
   }
 
-  public void setProductDataToFill(List<String> productDataToFill) {
+  public void setProductDataToFill(List<AiproductdataenhancerProductDataToFill> productDataToFill) {
     this.productDataToFill = productDataToFill;
   }
 
@@ -318,9 +319,19 @@ public class AiproductdataenhancerFillProductDataRequest {
       if (jsonObj.get("productInformation") != null && !jsonObj.get("productInformation").isJsonNull()) {
         AiproductdataenhancerProductInformation.validateJsonElement(jsonObj.get("productInformation"));
       }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("productDataToFill") != null && !jsonObj.get("productDataToFill").isJsonNull() && !jsonObj.get("productDataToFill").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `productDataToFill` to be an array in the JSON string but got `%s`", jsonObj.get("productDataToFill").toString()));
+      if (jsonObj.get("productDataToFill") != null && !jsonObj.get("productDataToFill").isJsonNull()) {
+        JsonArray jsonArrayproductDataToFill = jsonObj.getAsJsonArray("productDataToFill");
+        if (jsonArrayproductDataToFill != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("productDataToFill").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `productDataToFill` to be an array in the JSON string but got `%s`", jsonObj.get("productDataToFill").toString()));
+          }
+
+          // validate the optional field `productDataToFill` (array)
+          for (int i = 0; i < jsonArrayproductDataToFill.size(); i++) {
+            AiproductdataenhancerProductDataToFill.validateJsonElement(jsonArrayproductDataToFill.get(i));
+          };
+        }
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("domainsToInclude") != null && !jsonObj.get("domainsToInclude").isJsonNull() && !jsonObj.get("domainsToInclude").isJsonArray()) {

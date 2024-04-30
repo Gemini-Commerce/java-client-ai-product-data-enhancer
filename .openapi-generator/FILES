@@ -1,6 +1,5 @@
 .github/workflows/maven.yml
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -10,6 +9,7 @@ docs/AiProductDataEnhancerApi.md
 docs/AiproductdataenhancerFillProductDataRequest.md
 docs/AiproductdataenhancerFillProductDataResponse.md
 docs/AiproductdataenhancerLanguageCode.md
+docs/AiproductdataenhancerProductDataToFill.md
 docs/AiproductdataenhancerProductInformation.md
 docs/ProtobufAny.md
 docs/RpcStatus.md
@@ -44,6 +44,7 @@ src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/java/org/openapitools/client/model/AiproductdataenhancerFillProductDataRequest.java
 src/main/java/org/openapitools/client/model/AiproductdataenhancerFillProductDataResponse.java
 src/main/java/org/openapitools/client/model/AiproductdataenhancerLanguageCode.java
+src/main/java/org/openapitools/client/model/AiproductdataenhancerProductDataToFill.java
 src/main/java/org/openapitools/client/model/AiproductdataenhancerProductInformation.java
 src/main/java/org/openapitools/client/model/ProtobufAny.java
 src/main/java/org/openapitools/client/model/RpcStatus.java
@@ -51,6 +52,7 @@ src/test/java/org/openapitools/client/api/AiProductDataEnhancerApiTest.java
 src/test/java/org/openapitools/client/model/AiproductdataenhancerFillProductDataRequestTest.java
 src/test/java/org/openapitools/client/model/AiproductdataenhancerFillProductDataResponseTest.java
 src/test/java/org/openapitools/client/model/AiproductdataenhancerLanguageCodeTest.java
+src/test/java/org/openapitools/client/model/AiproductdataenhancerProductDataToFillTest.java
 src/test/java/org/openapitools/client/model/AiproductdataenhancerProductInformationTest.java
 src/test/java/org/openapitools/client/model/ProtobufAnyTest.java
 src/test/java/org/openapitools/client/model/RpcStatusTest.java
