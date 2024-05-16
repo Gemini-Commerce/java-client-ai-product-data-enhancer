@@ -20,9 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,22 +47,22 @@ import java.util.Set;
 import GeminiCommerce_AiProductDataEnhancer.JSON;
 
 /**
- * AiproductdataenhancerProductDataToFill
+ * AiproductdataenhancerDataToTranslate
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-16T14:31:04.308734802Z[Etc/UTC]")
-public class AiproductdataenhancerProductDataToFill {
+public class AiproductdataenhancerDataToTranslate {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  public static final String SERIALIZED_NAME_VALUE_SET = "valueSet";
-  @SerializedName(SERIALIZED_NAME_VALUE_SET)
-  private List<String> valueSet;
+  public static final String SERIALIZED_NAME_VALUE = "value";
+  @SerializedName(SERIALIZED_NAME_VALUE)
+  private String value;
 
-  public AiproductdataenhancerProductDataToFill() {
+  public AiproductdataenhancerDataToTranslate() {
   }
 
-  public AiproductdataenhancerProductDataToFill name(String name) {
+  public AiproductdataenhancerDataToTranslate name(String name) {
     this.name = name;
     return this;
   }
@@ -83,30 +81,22 @@ public class AiproductdataenhancerProductDataToFill {
   }
 
 
-  public AiproductdataenhancerProductDataToFill valueSet(List<String> valueSet) {
-    this.valueSet = valueSet;
-    return this;
-  }
-
-  public AiproductdataenhancerProductDataToFill addValueSetItem(String valueSetItem) {
-    if (this.valueSet == null) {
-      this.valueSet = new ArrayList<>();
-    }
-    this.valueSet.add(valueSetItem);
+  public AiproductdataenhancerDataToTranslate value(String value) {
+    this.value = value;
     return this;
   }
 
    /**
-   * Get valueSet
-   * @return valueSet
+   * Get value
+   * @return value
   **/
   @javax.annotation.Nullable
-  public List<String> getValueSet() {
-    return valueSet;
+  public String getValue() {
+    return value;
   }
 
-  public void setValueSet(List<String> valueSet) {
-    this.valueSet = valueSet;
+  public void setValue(String value) {
+    this.value = value;
   }
 
 
@@ -119,22 +109,22 @@ public class AiproductdataenhancerProductDataToFill {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AiproductdataenhancerProductDataToFill aiproductdataenhancerProductDataToFill = (AiproductdataenhancerProductDataToFill) o;
-    return Objects.equals(this.name, aiproductdataenhancerProductDataToFill.name) &&
-        Objects.equals(this.valueSet, aiproductdataenhancerProductDataToFill.valueSet);
+    AiproductdataenhancerDataToTranslate aiproductdataenhancerDataToTranslate = (AiproductdataenhancerDataToTranslate) o;
+    return Objects.equals(this.name, aiproductdataenhancerDataToTranslate.name) &&
+        Objects.equals(this.value, aiproductdataenhancerDataToTranslate.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, valueSet);
+    return Objects.hash(name, value);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiproductdataenhancerProductDataToFill {\n");
+    sb.append("class AiproductdataenhancerDataToTranslate {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    valueSet: ").append(toIndentedString(valueSet)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -158,7 +148,7 @@ public class AiproductdataenhancerProductDataToFill {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("name");
-    openapiFields.add("valueSet");
+    openapiFields.add("value");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -168,29 +158,28 @@ public class AiproductdataenhancerProductDataToFill {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AiproductdataenhancerProductDataToFill
+  * @throws IOException if the JSON Element is invalid with respect to AiproductdataenhancerDataToTranslate
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!AiproductdataenhancerProductDataToFill.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AiproductdataenhancerProductDataToFill is not found in the empty JSON string", AiproductdataenhancerProductDataToFill.openapiRequiredFields.toString()));
+        if (!AiproductdataenhancerDataToTranslate.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in AiproductdataenhancerDataToTranslate is not found in the empty JSON string", AiproductdataenhancerDataToTranslate.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!AiproductdataenhancerProductDataToFill.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AiproductdataenhancerProductDataToFill` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!AiproductdataenhancerDataToTranslate.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AiproductdataenhancerDataToTranslate` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("valueSet") != null && !jsonObj.get("valueSet").isJsonNull() && !jsonObj.get("valueSet").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `valueSet` to be an array in the JSON string but got `%s`", jsonObj.get("valueSet").toString()));
+      if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
       }
   }
 
@@ -198,22 +187,22 @@ public class AiproductdataenhancerProductDataToFill {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AiproductdataenhancerProductDataToFill.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AiproductdataenhancerProductDataToFill' and its subtypes
+       if (!AiproductdataenhancerDataToTranslate.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AiproductdataenhancerDataToTranslate' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AiproductdataenhancerProductDataToFill> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AiproductdataenhancerProductDataToFill.class));
+       final TypeAdapter<AiproductdataenhancerDataToTranslate> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AiproductdataenhancerDataToTranslate.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AiproductdataenhancerProductDataToFill>() {
+       return (TypeAdapter<T>) new TypeAdapter<AiproductdataenhancerDataToTranslate>() {
            @Override
-           public void write(JsonWriter out, AiproductdataenhancerProductDataToFill value) throws IOException {
+           public void write(JsonWriter out, AiproductdataenhancerDataToTranslate value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public AiproductdataenhancerProductDataToFill read(JsonReader in) throws IOException {
+           public AiproductdataenhancerDataToTranslate read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -224,18 +213,18 @@ public class AiproductdataenhancerProductDataToFill {
   }
 
  /**
-  * Create an instance of AiproductdataenhancerProductDataToFill given an JSON string
+  * Create an instance of AiproductdataenhancerDataToTranslate given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AiproductdataenhancerProductDataToFill
-  * @throws IOException if the JSON string is invalid with respect to AiproductdataenhancerProductDataToFill
+  * @return An instance of AiproductdataenhancerDataToTranslate
+  * @throws IOException if the JSON string is invalid with respect to AiproductdataenhancerDataToTranslate
   */
-  public static AiproductdataenhancerProductDataToFill fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AiproductdataenhancerProductDataToFill.class);
+  public static AiproductdataenhancerDataToTranslate fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AiproductdataenhancerDataToTranslate.class);
   }
 
  /**
-  * Convert an instance of AiproductdataenhancerProductDataToFill to an JSON string
+  * Convert an instance of AiproductdataenhancerDataToTranslate to an JSON string
   *
   * @return JSON string
   */

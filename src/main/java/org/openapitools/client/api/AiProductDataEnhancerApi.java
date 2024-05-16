@@ -29,6 +29,8 @@ import java.io.IOException;
 
 import org.openapitools.client.model.AiproductdataenhancerFillProductDataRequest;
 import org.openapitools.client.model.AiproductdataenhancerFillProductDataResponse;
+import org.openapitools.client.model.AiproductdataenhancerTranslateDataRequest;
+import org.openapitools.client.model.AiproductdataenhancerTranslateDataResponse;
 import org.openapitools.client.model.RpcStatus;
 
 import java.lang.reflect.Type;
@@ -198,6 +200,133 @@ public class AiProductDataEnhancerApi {
 
         okhttp3.Call localVarCall = aiProductDataEnhancerFillProductDataValidateBeforeCall(body, _callback);
         Type localVarReturnType = new TypeToken<AiproductdataenhancerFillProductDataResponse>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for aiProductDataEnhancerTranslateData
+     * @param body  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call aiProductDataEnhancerTranslateDataCall(AiproductdataenhancerTranslateDataRequest body, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/aiproductdataenhancer.AiProductDataEnhancer/TranslateData";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call aiProductDataEnhancerTranslateDataValidateBeforeCall(AiproductdataenhancerTranslateDataRequest body, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling aiProductDataEnhancerTranslateData(Async)");
+        }
+
+        return aiProductDataEnhancerTranslateDataCall(body, _callback);
+
+    }
+
+    /**
+     * 
+     * 
+     * @param body  (required)
+     * @return AiproductdataenhancerTranslateDataResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public AiproductdataenhancerTranslateDataResponse aiProductDataEnhancerTranslateData(AiproductdataenhancerTranslateDataRequest body) throws ApiException {
+        ApiResponse<AiproductdataenhancerTranslateDataResponse> localVarResp = aiProductDataEnhancerTranslateDataWithHttpInfo(body);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param body  (required)
+     * @return ApiResponse&lt;AiproductdataenhancerTranslateDataResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AiproductdataenhancerTranslateDataResponse> aiProductDataEnhancerTranslateDataWithHttpInfo(AiproductdataenhancerTranslateDataRequest body) throws ApiException {
+        okhttp3.Call localVarCall = aiProductDataEnhancerTranslateDataValidateBeforeCall(body, null);
+        Type localVarReturnType = new TypeToken<AiproductdataenhancerTranslateDataResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param body  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> A successful response. </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> An unexpected error response. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call aiProductDataEnhancerTranslateDataAsync(AiproductdataenhancerTranslateDataRequest body, final ApiCallback<AiproductdataenhancerTranslateDataResponse> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = aiProductDataEnhancerTranslateDataValidateBeforeCall(body, _callback);
+        Type localVarReturnType = new TypeToken<AiproductdataenhancerTranslateDataResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

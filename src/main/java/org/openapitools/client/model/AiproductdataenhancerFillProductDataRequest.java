@@ -54,7 +54,7 @@ import GeminiCommerce_AiProductDataEnhancer.JSON;
 /**
  * AiproductdataenhancerFillProductDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-30T15:19:43.952856902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-16T14:31:04.308734802Z[Etc/UTC]")
 public class AiproductdataenhancerFillProductDataRequest {
   public static final String SERIALIZED_NAME_TENANT_ID = "tenantId";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)

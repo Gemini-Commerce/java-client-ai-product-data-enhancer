@@ -16,6 +16,8 @@ package org.openapitools.client.api;
 import GeminiCommerce_AiProductDataEnhancer.ApiException;
 import org.openapitools.client.model.AiproductdataenhancerFillProductDataRequest;
 import org.openapitools.client.model.AiproductdataenhancerFillProductDataResponse;
+import org.openapitools.client.model.AiproductdataenhancerTranslateDataRequest;
+import org.openapitools.client.model.AiproductdataenhancerTranslateDataResponse;
 import org.openapitools.client.model.RpcStatus;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -40,6 +42,16 @@ public class AiProductDataEnhancerApiTest {
     public void aiProductDataEnhancerFillProductDataTest() throws ApiException {
         AiproductdataenhancerFillProductDataRequest body = null;
         AiproductdataenhancerFillProductDataResponse response = api.aiProductDataEnhancerFillProductData(body);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void aiProductDataEnhancerTranslateDataTest() throws ApiException {
+        AiproductdataenhancerTranslateDataRequest body = null;
+        AiproductdataenhancerTranslateDataResponse response = api.aiProductDataEnhancerTranslateData(body);
         // TODO: test validations
     }
 
