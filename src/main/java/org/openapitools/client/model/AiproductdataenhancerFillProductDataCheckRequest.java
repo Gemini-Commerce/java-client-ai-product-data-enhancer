@@ -47,18 +47,41 @@ import java.util.Set;
 import GeminiCommerce_AiProductDataEnhancer.JSON;
 
 /**
- * AiproductdataenhancerFillProductDataResponse
+ * AiproductdataenhancerFillProductDataCheckRequest
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-23T15:10:13.802504333Z[Etc/UTC]")
-public class AiproductdataenhancerFillProductDataResponse {
+public class AiproductdataenhancerFillProductDataCheckRequest {
+  public static final String SERIALIZED_NAME_TENANT_ID = "tenantId";
+  @SerializedName(SERIALIZED_NAME_TENANT_ID)
+  private String tenantId;
+
   public static final String SERIALIZED_NAME_JOB_ID = "jobId";
   @SerializedName(SERIALIZED_NAME_JOB_ID)
   private String jobId;
 
-  public AiproductdataenhancerFillProductDataResponse() {
+  public AiproductdataenhancerFillProductDataCheckRequest() {
   }
 
-  public AiproductdataenhancerFillProductDataResponse jobId(String jobId) {
+  public AiproductdataenhancerFillProductDataCheckRequest tenantId(String tenantId) {
+    this.tenantId = tenantId;
+    return this;
+  }
+
+   /**
+   * Get tenantId
+   * @return tenantId
+  **/
+  @javax.annotation.Nullable
+  public String getTenantId() {
+    return tenantId;
+  }
+
+  public void setTenantId(String tenantId) {
+    this.tenantId = tenantId;
+  }
+
+
+  public AiproductdataenhancerFillProductDataCheckRequest jobId(String jobId) {
     this.jobId = jobId;
     return this;
   }
@@ -86,19 +109,21 @@ public class AiproductdataenhancerFillProductDataResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AiproductdataenhancerFillProductDataResponse aiproductdataenhancerFillProductDataResponse = (AiproductdataenhancerFillProductDataResponse) o;
-    return Objects.equals(this.jobId, aiproductdataenhancerFillProductDataResponse.jobId);
+    AiproductdataenhancerFillProductDataCheckRequest aiproductdataenhancerFillProductDataCheckRequest = (AiproductdataenhancerFillProductDataCheckRequest) o;
+    return Objects.equals(this.tenantId, aiproductdataenhancerFillProductDataCheckRequest.tenantId) &&
+        Objects.equals(this.jobId, aiproductdataenhancerFillProductDataCheckRequest.jobId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(jobId);
+    return Objects.hash(tenantId, jobId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AiproductdataenhancerFillProductDataResponse {\n");
+    sb.append("class AiproductdataenhancerFillProductDataCheckRequest {\n");
+    sb.append("    tenantId: ").append(toIndentedString(tenantId)).append("\n");
     sb.append("    jobId: ").append(toIndentedString(jobId)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -122,6 +147,7 @@ public class AiproductdataenhancerFillProductDataResponse {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("tenantId");
     openapiFields.add("jobId");
 
     // a set of required properties/fields (JSON key names)
@@ -132,23 +158,26 @@ public class AiproductdataenhancerFillProductDataResponse {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AiproductdataenhancerFillProductDataResponse
+  * @throws IOException if the JSON Element is invalid with respect to AiproductdataenhancerFillProductDataCheckRequest
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!AiproductdataenhancerFillProductDataResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AiproductdataenhancerFillProductDataResponse is not found in the empty JSON string", AiproductdataenhancerFillProductDataResponse.openapiRequiredFields.toString()));
+        if (!AiproductdataenhancerFillProductDataCheckRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in AiproductdataenhancerFillProductDataCheckRequest is not found in the empty JSON string", AiproductdataenhancerFillProductDataCheckRequest.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!AiproductdataenhancerFillProductDataResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AiproductdataenhancerFillProductDataResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!AiproductdataenhancerFillProductDataCheckRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AiproductdataenhancerFillProductDataCheckRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("tenantId") != null && !jsonObj.get("tenantId").isJsonNull()) && !jsonObj.get("tenantId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tenantId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenantId").toString()));
+      }
       if ((jsonObj.get("jobId") != null && !jsonObj.get("jobId").isJsonNull()) && !jsonObj.get("jobId").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `jobId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("jobId").toString()));
       }
@@ -158,22 +187,22 @@ public class AiproductdataenhancerFillProductDataResponse {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AiproductdataenhancerFillProductDataResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AiproductdataenhancerFillProductDataResponse' and its subtypes
+       if (!AiproductdataenhancerFillProductDataCheckRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AiproductdataenhancerFillProductDataCheckRequest' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AiproductdataenhancerFillProductDataResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AiproductdataenhancerFillProductDataResponse.class));
+       final TypeAdapter<AiproductdataenhancerFillProductDataCheckRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AiproductdataenhancerFillProductDataCheckRequest.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AiproductdataenhancerFillProductDataResponse>() {
+       return (TypeAdapter<T>) new TypeAdapter<AiproductdataenhancerFillProductDataCheckRequest>() {
            @Override
-           public void write(JsonWriter out, AiproductdataenhancerFillProductDataResponse value) throws IOException {
+           public void write(JsonWriter out, AiproductdataenhancerFillProductDataCheckRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public AiproductdataenhancerFillProductDataResponse read(JsonReader in) throws IOException {
+           public AiproductdataenhancerFillProductDataCheckRequest read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -184,18 +213,18 @@ public class AiproductdataenhancerFillProductDataResponse {
   }
 
  /**
-  * Create an instance of AiproductdataenhancerFillProductDataResponse given an JSON string
+  * Create an instance of AiproductdataenhancerFillProductDataCheckRequest given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AiproductdataenhancerFillProductDataResponse
-  * @throws IOException if the JSON string is invalid with respect to AiproductdataenhancerFillProductDataResponse
+  * @return An instance of AiproductdataenhancerFillProductDataCheckRequest
+  * @throws IOException if the JSON string is invalid with respect to AiproductdataenhancerFillProductDataCheckRequest
   */
-  public static AiproductdataenhancerFillProductDataResponse fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AiproductdataenhancerFillProductDataResponse.class);
+  public static AiproductdataenhancerFillProductDataCheckRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AiproductdataenhancerFillProductDataCheckRequest.class);
   }
 
  /**
-  * Convert an instance of AiproductdataenhancerFillProductDataResponse to an JSON string
+  * Convert an instance of AiproductdataenhancerFillProductDataCheckRequest to an JSON string
   *
   * @return JSON string
   */

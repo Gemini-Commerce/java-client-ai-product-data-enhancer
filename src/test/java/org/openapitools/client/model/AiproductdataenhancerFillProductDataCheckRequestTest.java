@@ -19,50 +19,38 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for AiproductdataenhancerProductDataToFill
+ * Model tests for AiproductdataenhancerFillProductDataCheckRequest
  */
-public class AiproductdataenhancerProductDataToFillTest {
-    private final AiproductdataenhancerProductDataToFill model = new AiproductdataenhancerProductDataToFill();
+public class AiproductdataenhancerFillProductDataCheckRequestTest {
+    private final AiproductdataenhancerFillProductDataCheckRequest model = new AiproductdataenhancerFillProductDataCheckRequest();
 
     /**
-     * Model tests for AiproductdataenhancerProductDataToFill
+     * Model tests for AiproductdataenhancerFillProductDataCheckRequest
      */
     @Test
-    public void testAiproductdataenhancerProductDataToFill() {
-        // TODO: test AiproductdataenhancerProductDataToFill
+    public void testAiproductdataenhancerFillProductDataCheckRequest() {
+        // TODO: test AiproductdataenhancerFillProductDataCheckRequest
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'tenantId'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void tenantIdTest() {
+        // TODO: test tenantId
     }
 
     /**
-     * Test the property 'valueSet'
+     * Test the property 'jobId'
      */
     @Test
-    public void valueSetTest() {
-        // TODO: test valueSet
-    }
-
-    /**
-     * Test the property 'metadata'
-     */
-    @Test
-    public void metadataTest() {
-        // TODO: test metadata
+    public void jobIdTest() {
+        // TODO: test jobId
     }
 
 }

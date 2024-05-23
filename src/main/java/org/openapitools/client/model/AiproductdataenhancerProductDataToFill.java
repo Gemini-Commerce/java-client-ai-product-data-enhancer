@@ -22,7 +22,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +53,7 @@ import GeminiCommerce_AiProductDataEnhancer.JSON;
 /**
  * AiproductdataenhancerProductDataToFill
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-16T14:31:04.308734802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-23T15:10:13.802504333Z[Etc/UTC]")
 public class AiproductdataenhancerProductDataToFill {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -60,6 +62,10 @@ public class AiproductdataenhancerProductDataToFill {
   public static final String SERIALIZED_NAME_VALUE_SET = "valueSet";
   @SerializedName(SERIALIZED_NAME_VALUE_SET)
   private List<String> valueSet;
+
+  public static final String SERIALIZED_NAME_METADATA = "metadata";
+  @SerializedName(SERIALIZED_NAME_METADATA)
+  private Map<String, String> metadata = new HashMap<>();
 
   public AiproductdataenhancerProductDataToFill() {
   }
@@ -110,6 +116,33 @@ public class AiproductdataenhancerProductDataToFill {
   }
 
 
+  public AiproductdataenhancerProductDataToFill metadata(Map<String, String> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+  public AiproductdataenhancerProductDataToFill putMetadataItem(String key, String metadataItem) {
+    if (this.metadata == null) {
+      this.metadata = new HashMap<>();
+    }
+    this.metadata.put(key, metadataItem);
+    return this;
+  }
+
+   /**
+   * Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
+   * @return metadata
+  **/
+  @javax.annotation.Nullable
+  public Map<String, String> getMetadata() {
+    return metadata;
+  }
+
+  public void setMetadata(Map<String, String> metadata) {
+    this.metadata = metadata;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -121,12 +154,13 @@ public class AiproductdataenhancerProductDataToFill {
     }
     AiproductdataenhancerProductDataToFill aiproductdataenhancerProductDataToFill = (AiproductdataenhancerProductDataToFill) o;
     return Objects.equals(this.name, aiproductdataenhancerProductDataToFill.name) &&
-        Objects.equals(this.valueSet, aiproductdataenhancerProductDataToFill.valueSet);
+        Objects.equals(this.valueSet, aiproductdataenhancerProductDataToFill.valueSet) &&
+        Objects.equals(this.metadata, aiproductdataenhancerProductDataToFill.metadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, valueSet);
+    return Objects.hash(name, valueSet, metadata);
   }
 
   @Override
@@ -135,6 +169,7 @@ public class AiproductdataenhancerProductDataToFill {
     sb.append("class AiproductdataenhancerProductDataToFill {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    valueSet: ").append(toIndentedString(valueSet)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -159,6 +194,7 @@ public class AiproductdataenhancerProductDataToFill {
     openapiFields = new HashSet<String>();
     openapiFields.add("name");
     openapiFields.add("valueSet");
+    openapiFields.add("metadata");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

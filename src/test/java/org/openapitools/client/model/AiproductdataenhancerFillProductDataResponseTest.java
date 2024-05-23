@@ -20,8 +20,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -40,27 +38,11 @@ public class AiproductdataenhancerFillProductDataResponseTest {
     }
 
     /**
-     * Test the property 'productDataFilled'
+     * Test the property 'jobId'
      */
     @Test
-    public void productDataFilledTest() {
-        // TODO: test productDataFilled
-    }
-
-    /**
-     * Test the property 'confidenceRate'
-     */
-    @Test
-    public void confidenceRateTest() {
-        // TODO: test confidenceRate
-    }
-
-    /**
-     * Test the property 'completionRate'
-     */
-    @Test
-    public void completionRateTest() {
-        // TODO: test completionRate
+    public void jobIdTest() {
+        // TODO: test jobId
     }
 
 }

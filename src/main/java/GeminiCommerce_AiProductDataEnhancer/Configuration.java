@@ -13,9 +13,9 @@
 
 package GeminiCommerce_AiProductDataEnhancer;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-16T14:31:04.308734802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-23T15:10:13.802504333Z[Etc/UTC]")
 public class Configuration {
-    public static final String VERSION = "1.2.0";
+    public static final String VERSION = "1.3.0";
 
     private static ApiClient defaultApiClient = new ApiClient();
 

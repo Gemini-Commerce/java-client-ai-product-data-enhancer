@@ -14,6 +14,8 @@
 package org.openapitools.client.api;
 
 import GeminiCommerce_AiProductDataEnhancer.ApiException;
+import org.openapitools.client.model.AiproductdataenhancerFillProductDataCheckRequest;
+import org.openapitools.client.model.AiproductdataenhancerFillProductDataCheckResponse;
 import org.openapitools.client.model.AiproductdataenhancerFillProductDataRequest;
 import org.openapitools.client.model.AiproductdataenhancerFillProductDataResponse;
 import org.openapitools.client.model.AiproductdataenhancerTranslateDataRequest;
@@ -42,6 +44,16 @@ public class AiProductDataEnhancerApiTest {
     public void aiProductDataEnhancerFillProductDataTest() throws ApiException {
         AiproductdataenhancerFillProductDataRequest body = null;
         AiproductdataenhancerFillProductDataResponse response = api.aiProductDataEnhancerFillProductData(body);
+        // TODO: test validations
+    }
+
+    /**
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void aiProductDataEnhancerFillProductDataCheckTest() throws ApiException {
+        AiproductdataenhancerFillProductDataCheckRequest body = null;
+        AiproductdataenhancerFillProductDataCheckResponse response = api.aiProductDataEnhancerFillProductDataCheck(body);
         // TODO: test validations
     }
 

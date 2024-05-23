@@ -19,50 +19,38 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for AiproductdataenhancerProductDataToFill
+ * Model tests for AiproductdataenhancerError
  */
-public class AiproductdataenhancerProductDataToFillTest {
-    private final AiproductdataenhancerProductDataToFill model = new AiproductdataenhancerProductDataToFill();
+public class AiproductdataenhancerErrorTest {
+    private final AiproductdataenhancerError model = new AiproductdataenhancerError();
 
     /**
-     * Model tests for AiproductdataenhancerProductDataToFill
+     * Model tests for AiproductdataenhancerError
      */
     @Test
-    public void testAiproductdataenhancerProductDataToFill() {
-        // TODO: test AiproductdataenhancerProductDataToFill
+    public void testAiproductdataenhancerError() {
+        // TODO: test AiproductdataenhancerError
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'code'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void codeTest() {
+        // TODO: test code
     }
 
     /**
-     * Test the property 'valueSet'
+     * Test the property 'message'
      */
     @Test
-    public void valueSetTest() {
-        // TODO: test valueSet
-    }
-
-    /**
-     * Test the property 'metadata'
-     */
-    @Test
-    public void metadataTest() {
-        // TODO: test metadata
+    public void messageTest() {
+        // TODO: test message
     }
 
 }
