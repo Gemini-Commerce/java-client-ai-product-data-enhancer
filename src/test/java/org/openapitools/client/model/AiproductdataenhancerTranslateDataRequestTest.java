@@ -50,11 +50,19 @@ public class AiproductdataenhancerTranslateDataRequestTest {
     }
 
     /**
-     * Test the property 'languageCode'
+     * Test the property 'targetLanguage'
      */
     @Test
-    public void languageCodeTest() {
-        // TODO: test languageCode
+    public void targetLanguageTest() {
+        // TODO: test targetLanguage
+    }
+
+    /**
+     * Test the property 'sourceLanguage'
+     */
+    @Test
+    public void sourceLanguageTest() {
+        // TODO: test sourceLanguage
     }
 
     /**

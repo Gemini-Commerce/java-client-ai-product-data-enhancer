@@ -49,7 +49,7 @@ import GeminiCommerce_AiProductDataEnhancer.JSON;
 /**
  * AiproductdataenhancerError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-23T15:10:13.802504333Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-29T14:49:19.891260503Z[Etc/UTC]")
 public class AiproductdataenhancerError {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)

@@ -53,7 +53,7 @@ import GeminiCommerce_AiProductDataEnhancer.JSON;
 /**
  * AiproductdataenhancerFillProductDataCheckResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-23T15:10:13.802504333Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-29T14:49:19.891260503Z[Etc/UTC]")
 public class AiproductdataenhancerFillProductDataCheckResponse {
   public static final String SERIALIZED_NAME_PRODUCT_DATA_FILLED = "productDataFilled";
   @SerializedName(SERIALIZED_NAME_PRODUCT_DATA_FILLED)

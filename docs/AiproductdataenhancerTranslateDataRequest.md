@@ -7,7 +7,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenantId**| **String** |   | [optional]
-**languageCode**| [**AiproductdataenhancerLanguageCode**](AiproductdataenhancerLanguageCode.md) |  for more information please, see Model/AiproductdataenhancerLanguageCode.php  | [optional] [default to AiproductdataenhancerLanguageCode.UNKNOWN]
+**targetLanguage**| [**AiproductdataenhancerLanguageCode**](AiproductdataenhancerLanguageCode.md) |  for more information please, see Model/AiproductdataenhancerLanguageCode.php  | [optional] [default to AiproductdataenhancerLanguageCode.UNKNOWN]
+**sourceLanguage**| [**AiproductdataenhancerLanguageCode**](AiproductdataenhancerLanguageCode.md) |  for more information please, see Model/AiproductdataenhancerLanguageCode.php  | [optional] [default to AiproductdataenhancerLanguageCode.UNKNOWN]
 **dataToTranslate**| [**List<AiproductdataenhancerDataToTranslate>**](AiproductdataenhancerDataToTranslate.md) |   | [optional]
 
 

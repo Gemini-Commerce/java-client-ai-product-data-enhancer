@@ -53,15 +53,19 @@ import GeminiCommerce_AiProductDataEnhancer.JSON;
 /**
  * AiproductdataenhancerTranslateDataRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-23T15:10:13.802504333Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-29T14:49:19.891260503Z[Etc/UTC]")
 public class AiproductdataenhancerTranslateDataRequest {
   public static final String SERIALIZED_NAME_TENANT_ID = "tenantId";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
   private String tenantId;
 
-  public static final String SERIALIZED_NAME_LANGUAGE_CODE = "languageCode";
-  @SerializedName(SERIALIZED_NAME_LANGUAGE_CODE)
-  private AiproductdataenhancerLanguageCode languageCode = AiproductdataenhancerLanguageCode.UNKNOWN;
+  public static final String SERIALIZED_NAME_TARGET_LANGUAGE = "targetLanguage";
+  @SerializedName(SERIALIZED_NAME_TARGET_LANGUAGE)
+  private AiproductdataenhancerLanguageCode targetLanguage = AiproductdataenhancerLanguageCode.UNKNOWN;
+
+  public static final String SERIALIZED_NAME_SOURCE_LANGUAGE = "sourceLanguage";
+  @SerializedName(SERIALIZED_NAME_SOURCE_LANGUAGE)
+  private AiproductdataenhancerLanguageCode sourceLanguage = AiproductdataenhancerLanguageCode.UNKNOWN;
 
   public static final String SERIALIZED_NAME_DATA_TO_TRANSLATE = "dataToTranslate";
   @SerializedName(SERIALIZED_NAME_DATA_TO_TRANSLATE)
@@ -89,22 +93,41 @@ public class AiproductdataenhancerTranslateDataRequest {
   }
 
 
-  public AiproductdataenhancerTranslateDataRequest languageCode(AiproductdataenhancerLanguageCode languageCode) {
-    this.languageCode = languageCode;
+  public AiproductdataenhancerTranslateDataRequest targetLanguage(AiproductdataenhancerLanguageCode targetLanguage) {
+    this.targetLanguage = targetLanguage;
     return this;
   }
 
    /**
-   * Get languageCode
-   * @return languageCode
+   * Get targetLanguage
+   * @return targetLanguage
   **/
   @javax.annotation.Nullable
-  public AiproductdataenhancerLanguageCode getLanguageCode() {
-    return languageCode;
+  public AiproductdataenhancerLanguageCode getTargetLanguage() {
+    return targetLanguage;
   }
 
-  public void setLanguageCode(AiproductdataenhancerLanguageCode languageCode) {
-    this.languageCode = languageCode;
+  public void setTargetLanguage(AiproductdataenhancerLanguageCode targetLanguage) {
+    this.targetLanguage = targetLanguage;
+  }
+
+
+  public AiproductdataenhancerTranslateDataRequest sourceLanguage(AiproductdataenhancerLanguageCode sourceLanguage) {
+    this.sourceLanguage = sourceLanguage;
+    return this;
+  }
+
+   /**
+   * Get sourceLanguage
+   * @return sourceLanguage
+  **/
+  @javax.annotation.Nullable
+  public AiproductdataenhancerLanguageCode getSourceLanguage() {
+    return sourceLanguage;
+  }
+
+  public void setSourceLanguage(AiproductdataenhancerLanguageCode sourceLanguage) {
+    this.sourceLanguage = sourceLanguage;
   }
 
 
@@ -146,13 +169,14 @@ public class AiproductdataenhancerTranslateDataRequest {
     }
     AiproductdataenhancerTranslateDataRequest aiproductdataenhancerTranslateDataRequest = (AiproductdataenhancerTranslateDataRequest) o;
     return Objects.equals(this.tenantId, aiproductdataenhancerTranslateDataRequest.tenantId) &&
-        Objects.equals(this.languageCode, aiproductdataenhancerTranslateDataRequest.languageCode) &&
+        Objects.equals(this.targetLanguage, aiproductdataenhancerTranslateDataRequest.targetLanguage) &&
+        Objects.equals(this.sourceLanguage, aiproductdataenhancerTranslateDataRequest.sourceLanguage) &&
         Objects.equals(this.dataToTranslate, aiproductdataenhancerTranslateDataRequest.dataToTranslate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tenantId, languageCode, dataToTranslate);
+    return Objects.hash(tenantId, targetLanguage, sourceLanguage, dataToTranslate);
   }
 
   @Override
@@ -160,7 +184,8 @@ public class AiproductdataenhancerTranslateDataRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class AiproductdataenhancerTranslateDataRequest {\n");
     sb.append("    tenantId: ").append(toIndentedString(tenantId)).append("\n");
-    sb.append("    languageCode: ").append(toIndentedString(languageCode)).append("\n");
+    sb.append("    targetLanguage: ").append(toIndentedString(targetLanguage)).append("\n");
+    sb.append("    sourceLanguage: ").append(toIndentedString(sourceLanguage)).append("\n");
     sb.append("    dataToTranslate: ").append(toIndentedString(dataToTranslate)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -185,7 +210,8 @@ public class AiproductdataenhancerTranslateDataRequest {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("tenantId");
-    openapiFields.add("languageCode");
+    openapiFields.add("targetLanguage");
+    openapiFields.add("sourceLanguage");
     openapiFields.add("dataToTranslate");
 
     // a set of required properties/fields (JSON key names)
@@ -216,9 +242,13 @@ public class AiproductdataenhancerTranslateDataRequest {
       if ((jsonObj.get("tenantId") != null && !jsonObj.get("tenantId").isJsonNull()) && !jsonObj.get("tenantId").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tenantId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tenantId").toString()));
       }
-      // validate the optional field `languageCode`
-      if (jsonObj.get("languageCode") != null && !jsonObj.get("languageCode").isJsonNull()) {
-        AiproductdataenhancerLanguageCode.validateJsonElement(jsonObj.get("languageCode"));
+      // validate the optional field `targetLanguage`
+      if (jsonObj.get("targetLanguage") != null && !jsonObj.get("targetLanguage").isJsonNull()) {
+        AiproductdataenhancerLanguageCode.validateJsonElement(jsonObj.get("targetLanguage"));
+      }
+      // validate the optional field `sourceLanguage`
+      if (jsonObj.get("sourceLanguage") != null && !jsonObj.get("sourceLanguage").isJsonNull()) {
+        AiproductdataenhancerLanguageCode.validateJsonElement(jsonObj.get("sourceLanguage"));
       }
       if (jsonObj.get("dataToTranslate") != null && !jsonObj.get("dataToTranslate").isJsonNull()) {
         JsonArray jsonArraydataToTranslate = jsonObj.getAsJsonArray("dataToTranslate");
