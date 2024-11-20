@@ -20,8 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.openapitools.client.model.AiproductdataenhancerError;
 import org.openapitools.client.model.AiproductdataenhancerJobStatus;
@@ -41,19 +43,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import GeminiCommerce_AiProductDataEnhancer.JSON;
+import GeminiCommerce.AiProductDataEnhancer.JSON;
 
 /**
  * AiproductdataenhancerFillProductDataCheckResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-29T14:49:19.891260503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-20T14:54:03.495312875Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AiproductdataenhancerFillProductDataCheckResponse {
   public static final String SERIALIZED_NAME_PRODUCT_DATA_FILLED = "productDataFilled";
   @SerializedName(SERIALIZED_NAME_PRODUCT_DATA_FILLED)
@@ -75,6 +76,10 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
   @SerializedName(SERIALIZED_NAME_ERROR)
   private AiproductdataenhancerError error;
 
+  public static final String SERIALIZED_NAME_IMAGE_URLS = "imageUrls";
+  @SerializedName(SERIALIZED_NAME_IMAGE_URLS)
+  private List<String> imageUrls = new ArrayList<>();
+
   public AiproductdataenhancerFillProductDataCheckResponse() {
   }
 
@@ -91,10 +96,10 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     return this;
   }
 
-   /**
+  /**
    * Get productDataFilled
    * @return productDataFilled
-  **/
+   */
   @javax.annotation.Nullable
   public Map<String, String> getProductDataFilled() {
     return productDataFilled;
@@ -110,10 +115,10 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     return this;
   }
 
-   /**
+  /**
    * Get confidenceRate
    * @return confidenceRate
-  **/
+   */
   @javax.annotation.Nullable
   public Float getConfidenceRate() {
     return confidenceRate;
@@ -129,10 +134,10 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     return this;
   }
 
-   /**
+  /**
    * Get completionRate
    * @return completionRate
-  **/
+   */
   @javax.annotation.Nullable
   public Float getCompletionRate() {
     return completionRate;
@@ -148,10 +153,10 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
   public AiproductdataenhancerJobStatus getStatus() {
     return status;
@@ -167,10 +172,10 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     return this;
   }
 
-   /**
+  /**
    * Get error
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public AiproductdataenhancerError getError() {
     return error;
@@ -180,6 +185,77 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     this.error = error;
   }
 
+
+  public AiproductdataenhancerFillProductDataCheckResponse imageUrls(List<String> imageUrls) {
+    this.imageUrls = imageUrls;
+    return this;
+  }
+
+  public AiproductdataenhancerFillProductDataCheckResponse addImageUrlsItem(String imageUrlsItem) {
+    if (this.imageUrls == null) {
+      this.imageUrls = new ArrayList<>();
+    }
+    this.imageUrls.add(imageUrlsItem);
+    return this;
+  }
+
+  /**
+   * Get imageUrls
+   * @return imageUrls
+   */
+  @javax.annotation.Nullable
+  public List<String> getImageUrls() {
+    return imageUrls;
+  }
+
+  public void setImageUrls(List<String> imageUrls) {
+    this.imageUrls = imageUrls;
+  }
+
+  /**
+   * A container for additional, undeclared properties.
+   * This is a holder for any undeclared properties as specified with
+   * the 'additionalProperties' keyword in the OAS document.
+   */
+  private Map<String, Object> additionalProperties;
+
+  /**
+   * Set the additional (undeclared) property with the specified name and value.
+   * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AiproductdataenhancerFillProductDataCheckResponse instance itself
+   */
+  public AiproductdataenhancerFillProductDataCheckResponse putAdditionalProperty(String key, Object value) {
+    if (this.additionalProperties == null) {
+        this.additionalProperties = new HashMap<String, Object>();
+    }
+    this.additionalProperties.put(key, value);
+    return this;
+  }
+
+  /**
+   * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
+   */
+  public Map<String, Object> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
+   */
+  public Object getAdditionalProperty(String key) {
+    if (this.additionalProperties == null) {
+        return null;
+    }
+    return this.additionalProperties.get(key);
+  }
 
 
   @Override
@@ -195,12 +271,14 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
         Objects.equals(this.confidenceRate, aiproductdataenhancerFillProductDataCheckResponse.confidenceRate) &&
         Objects.equals(this.completionRate, aiproductdataenhancerFillProductDataCheckResponse.completionRate) &&
         Objects.equals(this.status, aiproductdataenhancerFillProductDataCheckResponse.status) &&
-        Objects.equals(this.error, aiproductdataenhancerFillProductDataCheckResponse.error);
+        Objects.equals(this.error, aiproductdataenhancerFillProductDataCheckResponse.error) &&
+        Objects.equals(this.imageUrls, aiproductdataenhancerFillProductDataCheckResponse.imageUrls)&&
+        Objects.equals(this.additionalProperties, aiproductdataenhancerFillProductDataCheckResponse.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productDataFilled, confidenceRate, completionRate, status, error);
+    return Objects.hash(productDataFilled, confidenceRate, completionRate, status, error, imageUrls, additionalProperties);
   }
 
   @Override
@@ -212,6 +290,8 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     sb.append("    completionRate: ").append(toIndentedString(completionRate)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
+    sb.append("    imageUrls: ").append(toIndentedString(imageUrls)).append("\n");
+    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -239,29 +319,22 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
     openapiFields.add("completionRate");
     openapiFields.add("status");
     openapiFields.add("error");
+    openapiFields.add("imageUrls");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AiproductdataenhancerFillProductDataCheckResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AiproductdataenhancerFillProductDataCheckResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AiproductdataenhancerFillProductDataCheckResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AiproductdataenhancerFillProductDataCheckResponse is not found in the empty JSON string", AiproductdataenhancerFillProductDataCheckResponse.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!AiproductdataenhancerFillProductDataCheckResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AiproductdataenhancerFillProductDataCheckResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -272,6 +345,10 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
       // validate the optional field `error`
       if (jsonObj.get("error") != null && !jsonObj.get("error").isJsonNull()) {
         AiproductdataenhancerError.validateJsonElement(jsonObj.get("error"));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("imageUrls") != null && !jsonObj.get("imageUrls").isJsonNull() && !jsonObj.get("imageUrls").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `imageUrls` to be an array in the JSON string but got `%s`", jsonObj.get("imageUrls").toString()));
       }
   }
 
@@ -290,6 +367,28 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
            @Override
            public void write(JsonWriter out, AiproductdataenhancerFillProductDataCheckResponse value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             obj.remove("additionalProperties");
+             // serialize additional properties
+             if (value.getAdditionalProperties() != null) {
+               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
+                 if (entry.getValue() instanceof String)
+                   obj.addProperty(entry.getKey(), (String) entry.getValue());
+                 else if (entry.getValue() instanceof Number)
+                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
+                 else if (entry.getValue() instanceof Boolean)
+                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
+                 else if (entry.getValue() instanceof Character)
+                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
+                 else {
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
+                 }
+               }
+             }
              elementAdapter.write(out, obj);
            }
 
@@ -297,29 +396,50 @@ public class AiproductdataenhancerFillProductDataCheckResponse {
            public AiproductdataenhancerFillProductDataCheckResponse read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             // store additional fields in the deserialized instance
+             AiproductdataenhancerFillProductDataCheckResponse instance = thisAdapter.fromJsonTree(jsonObj);
+             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
+               if (!openapiFields.contains(entry.getKey())) {
+                 if (entry.getValue().isJsonPrimitive()) { // primitive type
+                   if (entry.getValue().getAsJsonPrimitive().isString())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
+                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
+                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
+                   else
+                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 }
+               }
+             }
+             return instance;
            }
 
        }.nullSafe();
     }
   }
 
- /**
-  * Create an instance of AiproductdataenhancerFillProductDataCheckResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AiproductdataenhancerFillProductDataCheckResponse
-  * @throws IOException if the JSON string is invalid with respect to AiproductdataenhancerFillProductDataCheckResponse
-  */
+  /**
+   * Create an instance of AiproductdataenhancerFillProductDataCheckResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AiproductdataenhancerFillProductDataCheckResponse
+   * @throws IOException if the JSON string is invalid with respect to AiproductdataenhancerFillProductDataCheckResponse
+   */
   public static AiproductdataenhancerFillProductDataCheckResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AiproductdataenhancerFillProductDataCheckResponse.class);
   }
 
- /**
-  * Convert an instance of AiproductdataenhancerFillProductDataCheckResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AiproductdataenhancerFillProductDataCheckResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

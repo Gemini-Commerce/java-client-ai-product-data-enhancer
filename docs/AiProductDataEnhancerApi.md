@@ -6,6 +6,7 @@ All URIs are relative to *http://localhost*
 |------------- | ------------- | -------------|
 | [**aiProductDataEnhancerFillProductData**](AiProductDataEnhancerApi.md#aiProductDataEnhancerFillProductData) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/FillProductData |  |
 | [**aiProductDataEnhancerFillProductDataCheck**](AiProductDataEnhancerApi.md#aiProductDataEnhancerFillProductDataCheck) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/FillProductDataCheck |  |
+| [**aiProductDataEnhancerGenerateProductData**](AiProductDataEnhancerApi.md#aiProductDataEnhancerGenerateProductData) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/GenerateProductData |  |
 | [**aiProductDataEnhancerTranslateData**](AiProductDataEnhancerApi.md#aiProductDataEnhancerTranslateData) | **POST** /aiproductdataenhancer.AiProductDataEnhancer/TranslateData |  |
 
 
@@ -18,10 +19,10 @@ All URIs are relative to *http://localhost*
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_AiProductDataEnhancer.ApiClient;
-import GeminiCommerce_AiProductDataEnhancer.ApiException;
-import GeminiCommerce_AiProductDataEnhancer.Configuration;
-import GeminiCommerce_AiProductDataEnhancer.models.*;
+import GeminiCommerce.AiProductDataEnhancer.ApiClient;
+import GeminiCommerce.AiProductDataEnhancer.ApiException;
+import GeminiCommerce.AiProductDataEnhancer.Configuration;
+import GeminiCommerce.AiProductDataEnhancer.models.*;
 import org.openapitools.client.api.AiProductDataEnhancerApi;
 
 public class Example {
@@ -79,10 +80,10 @@ No authorization required
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_AiProductDataEnhancer.ApiClient;
-import GeminiCommerce_AiProductDataEnhancer.ApiException;
-import GeminiCommerce_AiProductDataEnhancer.Configuration;
-import GeminiCommerce_AiProductDataEnhancer.models.*;
+import GeminiCommerce.AiProductDataEnhancer.ApiClient;
+import GeminiCommerce.AiProductDataEnhancer.ApiException;
+import GeminiCommerce.AiProductDataEnhancer.Configuration;
+import GeminiCommerce.AiProductDataEnhancer.models.*;
 import org.openapitools.client.api.AiProductDataEnhancerApi;
 
 public class Example {
@@ -131,6 +132,67 @@ No authorization required
 | **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
+<a id="aiProductDataEnhancerGenerateProductData"></a>
+# **aiProductDataEnhancerGenerateProductData**
+> AiproductdataenhancerGenerateProductDataResponse aiProductDataEnhancerGenerateProductData(body)
+
+
+
+### Example
+```java
+// Import classes:
+import GeminiCommerce.AiProductDataEnhancer.ApiClient;
+import GeminiCommerce.AiProductDataEnhancer.ApiException;
+import GeminiCommerce.AiProductDataEnhancer.Configuration;
+import GeminiCommerce.AiProductDataEnhancer.models.*;
+import org.openapitools.client.api.AiProductDataEnhancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    AiProductDataEnhancerApi apiInstance = new AiProductDataEnhancerApi(defaultClient);
+    AiproductdataenhancerGenerateProductDataRequest body = new AiproductdataenhancerGenerateProductDataRequest(); // AiproductdataenhancerGenerateProductDataRequest | 
+    try {
+      AiproductdataenhancerGenerateProductDataResponse result = apiInstance.aiProductDataEnhancerGenerateProductData(body);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling AiProductDataEnhancerApi#aiProductDataEnhancerGenerateProductData");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AiproductdataenhancerGenerateProductDataRequest**](AiproductdataenhancerGenerateProductDataRequest.md)|  | |
+
+### Return type
+
+[**AiproductdataenhancerGenerateProductDataResponse**](AiproductdataenhancerGenerateProductDataResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
 <a id="aiProductDataEnhancerTranslateData"></a>
 # **aiProductDataEnhancerTranslateData**
 > AiproductdataenhancerTranslateDataResponse aiProductDataEnhancerTranslateData(body)
@@ -140,10 +202,10 @@ No authorization required
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_AiProductDataEnhancer.ApiClient;
-import GeminiCommerce_AiProductDataEnhancer.ApiException;
-import GeminiCommerce_AiProductDataEnhancer.Configuration;
-import GeminiCommerce_AiProductDataEnhancer.models.*;
+import GeminiCommerce.AiProductDataEnhancer.ApiClient;
+import GeminiCommerce.AiProductDataEnhancer.ApiException;
+import GeminiCommerce.AiProductDataEnhancer.Configuration;
+import GeminiCommerce.AiProductDataEnhancer.models.*;
 import org.openapitools.client.api.AiProductDataEnhancerApi;
 
 public class Example {
